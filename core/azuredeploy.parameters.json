@@ -2,13 +2,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "resourceGroupName": {
-      "value": "myResourceGroup"
+      "value": "njb1110rg"
     },
     "storageAccountName": {
-      "value": "mystorageaccount"
+      "value": "njb1110sa"
     },
     "keyVaultName": {
-      "value": "mykeyvault"
+      "value": "njb1110kv"
     }
   }
 }

@@ -27,3 +27,4 @@ jobs:
               --resource-group <resource-group-name> \
               --template-file azuredeploy.json \
               --parameters @azuredeploy.parameters.json
+              --what-if
