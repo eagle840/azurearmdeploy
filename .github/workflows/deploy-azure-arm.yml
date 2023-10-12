@@ -24,8 +24,6 @@ jobs:
         with:
           azcliversion: 2.28.0
           inlineScript: |
-            az deployment group create \
-              --resource-group <resource-group-name> \
+            az deployment sub create \
               --template-file azuredeploy.json \
-              --parameters @azuredeploy.parameters.json
-              --what-if
+              --parameters @azuredeploy.parameters.json 
