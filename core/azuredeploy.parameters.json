@@ -2,7 +2,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "resourceGroupName": {
-      "value": "njb1110rg"
+      "value": "njb1210"
     },
     "storageAccountName": {
       "value": "njb1110sa"
