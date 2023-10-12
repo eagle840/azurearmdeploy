@@ -25,5 +25,5 @@ jobs:
           azcliversion: 2.28.0
           inlineScript: |
             az deployment sub create \
-              --template-file azuredeploy.json \
-              --parameters @azuredeploy.parameters.json 
+              --template-file core/azuredeploy.json \
+              --parameters core/azuredeploy.parameters.json --debug
