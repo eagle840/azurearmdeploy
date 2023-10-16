@@ -22,5 +22,5 @@ jobs:
       - uses: azure/arm-deploy@v1
         with:
           resourceGroupName: njb1210
-          template: ./azuresa.json
+          template: ./core/azuresa.json
         
