@@ -19,12 +19,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy ARM Template
-        uses: azure/CLI@v1
+      - uses: azure/arm-deploy@v1
         with:
-          azcliversion: 2.28.0
-          inlineScript: |
-            az deployment sub create \
-              --location WestUS
-              --template-file core/staticdeploy.json \
-              
+          template: ./azuredeploy.json
+        
