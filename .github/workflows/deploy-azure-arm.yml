@@ -26,5 +26,5 @@ jobs:
           inlineScript: |
             az deployment sub create \
               --location WestUS
-              --template-file core/azuredeploy.json \
-              --parameters @core/azuredeploy.parameters.json --debug
+              --template-file core/staticdeploy.json \
+              
