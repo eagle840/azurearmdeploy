@@ -1,0 +1,34 @@
+# .github/workflows/deploy-azure-arm.yml
+
+name: Deploy Azure ARM infra Template
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: ARM Template Toolkit (ARM TTK) Validation
+        id: armttkvalidation
+        uses: aliencube/arm-ttk-actions@v0.3
+        with:
+          path: infra/webapp-arm.json 
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - uses: azure/arm-deploy@v1
+        with:
+          resourceGroupName: njb1210
+          template: ./infra/webapp-arm.json 
+        
