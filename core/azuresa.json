@@ -50,6 +50,7 @@
         }
     ],
     "variables": {
-        "njb1610Name": "[concat('njb1610', uniqueString(resourceGroup().id))]"
+        "njb1610Name": "[concat('njb1610', uniqueString(resourceGroup().id))]",
+        "njb1611Name": "[concat('njb1610', uniqueString(resourceGroup().id))]"
     }
 }
