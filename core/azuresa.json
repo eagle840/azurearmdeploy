@@ -33,9 +33,6 @@
             "apiVersion": "2021-04-01-preview",
             "name": "[variables('njb1611Name')]",
             "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Resources/resourceGroups/', parameters('resourceGroupName'))]"
-            ],
             "properties": {
                 "sku": {
                 "name": "standard",
