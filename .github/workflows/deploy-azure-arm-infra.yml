@@ -30,5 +30,6 @@ jobs:
       - uses: azure/arm-deploy@v1
         with:
           resourceGroupName: njb1210
-          template: ./infra/webapp-arm.json 
+          template: ./infra/webapp-arm.json
+          
         

@@ -6,13 +6,16 @@
             "type": "string"
         },
         "name": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "mySiteApp"
         },
         "location": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "West Europe"
         },
         "hostingPlanName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "myHostingPlan"
         },
         "serverFarmResourceGroup": {
             "type": "string"
@@ -24,10 +27,12 @@
             "type": "string"
         },
         "sku": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Standard"
         },
         "skuCode": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "S1"
         },
         "workerSize": {
             "type": "string"
@@ -94,11 +99,7 @@
             },
             "dependsOn": [],
             "properties": {
-                "name": "[parameters('hostingPlanName')]",
-                "workerSize": "[parameters('workerSize')]",
-                "workerSizeId": "[parameters('workerSizeId')]",
-                "numberOfWorkers": "[parameters('numberOfWorkers')]",
-                "zoneRedundant": false
+                "name": "[parameters('hostingPlanName')]"
             },
             "sku": {
                 "Tier": "[parameters('sku')]",
