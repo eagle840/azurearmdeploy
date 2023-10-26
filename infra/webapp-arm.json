@@ -20,12 +20,6 @@
         "serverFarmResourceGroup": {
             "type": "string"
         },
-        "alwaysOn": {
-            "type": "bool"
-        },
-        "ftpsState": {
-            "type": "string"
-        },
         "sku": {
             "type": "string",
             "defaultValue": "Standard"
@@ -33,24 +27,6 @@
         "skuCode": {
             "type": "string",
             "defaultValue": "S1"
-        },
-        "workerSize": {
-            "type": "string"
-        },
-        "workerSizeId": {
-            "type": "string"
-        },
-        "numberOfWorkers": {
-            "type": "string"
-        },
-        "currentStack": {
-            "type": "string"
-        },
-        "phpVersion": {
-            "type": "string"
-        },
-        "netFrameworkVersion": {
-            "type": "string"
         }
     },
     "variables": {},
@@ -72,14 +48,9 @@
                     "appSettings": [],
                     "metadata": [
                         {
-                            "name": "CURRENT_STACK",
-                            "value": "[parameters('currentStack')]"
+                            "name": "CURRENT_STACK"
                         }
-                    ],
-                    "phpVersion": "[parameters('phpVersion')]",
-                    "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
-                    "alwaysOn": "[parameters('alwaysOn')]",
-                    "ftpsState": "[parameters('ftpsState')]"
+                    ]
                 },
                 "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
                 "clientAffinityEnabled": true,
