@@ -4,7 +4,7 @@
     "parameters": {
         "name": {
             "type": "string",
-            "defaultValue": "mySiteApp"
+            "defaultValue": "mySiteAppnjb1210"
         },
         "location": {
             "type": "string",
