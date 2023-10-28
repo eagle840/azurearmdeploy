@@ -1,6 +1,6 @@
 # .github/workflows/deploy-azure-arm.yml
 
-name: Deploy Azure ARM infra Template
+name: Destroy Azure ARM infra Template
 on:
   workflow_dispatch:
 
