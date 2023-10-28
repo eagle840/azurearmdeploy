@@ -27,4 +27,4 @@ jobs:
           az deployment group delete \
             --name webapp-arm \
             --resource-group njb1210 \
-            --yes
+            --no-wait

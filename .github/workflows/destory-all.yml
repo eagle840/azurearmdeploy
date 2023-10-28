@@ -16,4 +16,4 @@ jobs:
 
       - name: Destroy Infrastructure
         run: |
-          az group delete --name njb1210 --yes --no-wait
+          az group delete --name njb1210 --no-wait
