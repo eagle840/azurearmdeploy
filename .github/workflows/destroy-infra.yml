@@ -2,11 +2,6 @@
 
 name: Deploy Azure ARM infra Template
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'infra/**'
   workflow_dispatch:
 
 jobs:
@@ -26,11 +21,10 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - uses: azure/arm-deploy@v1
-        with:
-          resourceGroupName: njb1210
-          deploymentName: webapp-arm
-          template: ./infra/webapp-arm.json
-          
-        
+      
+      - name: Destroy Azure Resource
+        run: |
+          az deployment group delete \
+            --name webapp-arm \
+            --resource-group njb1210 \
+            --yes
