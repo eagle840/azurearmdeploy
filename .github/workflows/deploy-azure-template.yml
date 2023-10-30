@@ -1,6 +1,6 @@
 # .github/workflows/deploy-azure-arm.yml
 
-name: Deploy Azure ARM infra Template
+name: Deploy Azure example Template
 on:
   workflow_dispatch:
 
