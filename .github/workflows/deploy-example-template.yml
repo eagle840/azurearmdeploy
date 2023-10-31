@@ -26,6 +26,6 @@ jobs:
         with:
           resourceGroupName: njb1210
           deploymentName: webapp-wasd
-          template: ./infra/azuredeploywasd.json
-          parameters: ./infra/azuredeploywasd.parameters.json
+          template: ./example1/azuredeploywasd.json
+          parameters: ./example1/azuredeploywasd.parameters.json
         
