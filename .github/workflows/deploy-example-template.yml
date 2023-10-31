@@ -28,4 +28,10 @@ jobs:
           deploymentName: webapp-wasd
           template: ./example1/azuredeploywasd.json
           parameters: ./example1/azuredeploywasd.parameters.json
+
+      - name: List Deployment Operations
+        run: |
+          az group deployment operation list --name webapp-arm --resource-group njb1210 --query "[].{OperationID:operationId,Status:properties.status,StatusCode:properties.statusCode,ErrorMessage:properties.statusMessage}" --output table
+        env:
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
         
