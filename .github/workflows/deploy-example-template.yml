@@ -22,6 +22,17 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Test Azure Key Vault
+        run: |
+          keyVaultName="njb1610wbib2brfplrag"
+          keyVaultExists=$(az keyvault show --name $keyVaultName --query "name" -o tsv || echo "false")
+          if [ "$keyVaultExists" == "false" ]; then
+            echo "Azure Key Vault does not exist"
+            exit 1
+          else
+            echo "Azure Key Vault exists"
+          fi
+
       - uses: azure/arm-deploy@v1
         with:
           resourceGroupName: njb1210
