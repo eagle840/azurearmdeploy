@@ -39,7 +39,20 @@
                 "family": "A"
                 },
                 "tenantId": "[subscription().tenantId]",
-                "accessPolicies": [],
+                "accessPolicies": [
+                {
+                    "tenantId": "df16422d-70a4-466d-a95c-f5a0f3115ca6",
+                    "objectId": "e35fff91-defa-4e6c-a66d-a4cc41f21578",
+                    "permissions": {
+                        "certificates": [],
+                        "keys": [],
+                        "secrets": [
+                            "get",
+                            "list"
+                        ]
+                }
+            }
+                ],
                 "enabledForDeployment": true,
                 "enabledForTemplateDeployment": true,
                 "enabledForDiskEncryption": true
