@@ -10,6 +10,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  
+  set-env:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Environment Variable
+        run: |
+          echo "TIME_HEX=$(printf '%x' $(date +%s))" >> $GITHUB_ENV
+
+  print-hextime;
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print Environment Variable
+        run: |
+          echo $TIME_HEX
+
   deploy:
     runs-on: ubuntu-latest
     steps:
