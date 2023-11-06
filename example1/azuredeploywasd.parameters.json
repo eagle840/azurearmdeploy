@@ -7,7 +7,7 @@
       },
       "sqlAdministratorLoginPassword": {
         "type": "secureString",		
-        "value": "[reference(concat('Microsoft.KeyVault/vaults/secrets/', 'njb1610wbib2brfplrag', '/', 'sqladminpw', '2018-02-14').value]",		
+        "value": "[reference(concat('Microsoft.KeyVault/vaults/secrets/', 'njb1610wbib2brfplrag', '/', 'sqladminpw', '2018-02-14').value]"	
       }		
     }
   }
