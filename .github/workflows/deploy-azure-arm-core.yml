@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "TIME_HEX=$(printf '%x' $(date +%s))" >> $GITHUB_ENV
 
-  print-hextime;
+  print-hextime:
     runs-on: ubuntu-latest
 
     steps:
