@@ -28,13 +28,13 @@ jobs:
       run: dotnet restore ./src
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore ./src
 
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal ./src
 
     - name: Publish
-      run: dotnet publish --configuration Release --no-build --output ./output
+      run: dotnet publish --configuration Release --no-build --output ./output ./src
 
     - name: Login to Azure
       uses: azure/login@v1
